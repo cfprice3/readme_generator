@@ -1,25 +1,13 @@
-// const questions = [
-
-//     type: "input",
-//     message: "What is your GitHub username",
-
-// ];
-
-// function writeToFile(fileName, data) {
-// }
-
-// function init() {
-
-// }
-
-// init();
-
-
-
+// declaring const fs for the writeTo function
 const fs = require("fs");
+
+// declaring const for axios api call to git hub
 const axios = require("axios");
+
+// declaring const for npm inquirer for prompted questions
 const questions = require("inquirer");
 
+// prompts requiring user input to populate later variables
 questions
   .prompt([{
     type: "input",
@@ -72,51 +60,11 @@ questions
         console.log(data.data.email);
 
         const getResults = [
-            ` Project name: ${projName}"\n"
+            `Project name: ${projName}"\n"
              GitHub Name: ${data.data.login},
              ${data.data.avatar_url}
              Email: ${this.email}`
        ];
        console.log(getResults)
     })
-
-
-
-
-    // fs.writeFile("log.txt", process.argv[2], function(err) {
-
-    //     if (err) {
-    //       return console.log(err);
-    //     }
-      
-    //     console.log("Success!");
-      
-      });
-//   .then(function({ username }) {
-//     const queryUrl = `https://api.github.com/users/${username}`;
-
-//     axios.get(queryUrl)
-//     .then(data => {
-//         console.log(data.data.login);
-//         console.log(data.data.avatar_url);
-//         console.log(data.data.email);
-        
-//     })
-    
-    
-    // axios.get(queryUrl).then(function(res) {
-    //   const repoNames = res.data.map(function(repo) {
-    //     return repo.name;
-    //   });
-
-    //   const repoNamesStr = repoNames.join("\n");
-
-    //   fs.writeFile("README.md", repoNamesStr, function(err) {
-    //     if (err) {
-    //       throw err;
-    //     }
-
-    //     console.log(`Saved ${repoNames.length} repos`);
-    //   });
-    // });
-//   });
+});
