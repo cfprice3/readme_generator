@@ -14,7 +14,7 @@ The user will be prompted for their GitHub username, which will be used to make 
 GitHub API to retrieve their email and profile image. They will then be prompted with questions 
 about their project.
 
-![Gif Example](assets\readmeGif.gif)
+![Gif Example](.\assets\readmeGif.gif)
 
 The README will be populated with the following:
 
