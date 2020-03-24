@@ -70,15 +70,28 @@ questions
         console.log(data.data.login);
         console.log(data.data.avatar_url);
         console.log(data.data.email);
-        
+
+        const getResults = [
+            ` Project name: ${projName}"\n"
+             GitHub Name: ${data.data.login},
+             ${data.data.avatar_url}
+             Email: ${this.email}`
+       ];
+       console.log(getResults)
     })
 
 
-          fs.writeFile("README.md", repoNamesStr, function(err) {
-        if (err) {
-          throw err;
-        });
 
+
+    // fs.writeFile("log.txt", process.argv[2], function(err) {
+
+    //     if (err) {
+    //       return console.log(err);
+    //     }
+      
+    //     console.log("Success!");
+      
+      });
 //   .then(function({ username }) {
 //     const queryUrl = `https://api.github.com/users/${username}`;
 
@@ -106,4 +119,4 @@ questions
     //     console.log(`Saved ${repoNames.length} repos`);
     //   });
     // });
-  });
+//   });
